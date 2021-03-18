@@ -1,10 +1,3 @@
-'''
-    Eliminar signos de puntuación
-    Eliminar los usuarios colocando la etiqueta $user.
-    Eliminar los hashtag colocando la etiqueta $ht.
-    Eliminar los emoticones colocando el tipo de emoticón, por ejemplo si es el emoticón es :) colocar la etiqueta SMILE.
-    Pasar todo a minúscula.
-'''
 import argparse
 import sys
 import os
@@ -20,16 +13,7 @@ from pathlib import Path
 
 
 def get_args():
-    parser = argparse.ArgumentParser(description='''\
-Con el siguiente conjunto de datos, en donde cada línea del archivo viene especificada de la siguiente manera: USER tweeted TWEET.
-Realizar primero un preprocesamiento:
-
-Eliminar signos de puntuación
-Eliminar los usuarios colocando la etiqueta $user.
-Eliminar los hashtag colocando la etiqueta $ht.
-Eliminar los emoticones colocando el tipo de emoticón, por ejemplo si es el emoticón es :) colocar la etiqueta SMILE.
-Pasar todo a minúscula.\
-''')
+    parser = argparse.ArgumentParser()
     parser.add_argument('-d', '--directory', type=str,
                         help='Flujo de entrada', default='documentos/originales/')
     return parser.parse_args()
